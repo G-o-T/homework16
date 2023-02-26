@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181818;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+input,
+select,
+option {
+    cursor: pointer;
+}
+
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-title {
+    margin: 8px 0 32px ;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__row {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 32px;
+}
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 234px;
+    border: none;
+    background-color: #313131;
+    color: #fff;
+    padding: 8px;
+}
+
+.input-title {
+    padding-bottom: 16px;
+    font-size: 22px;
+}
+
+.form__item-row {
+    display: flex;
+    gap: 32px;
+}
+
+.form__radiobtn-label {
+    font-size: 16px;
+}
+
+.btns {
+    display: flex;
+    gap: 32px;
+}
+
+.btn {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 22px;
+    padding: 8px 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    border: 2px solid #fff;
+    background-color: #fff;
+    color: #181818;
+}
+
+.price {
+    display: flex;
+    gap: 8px;
+    margin-top: 32px;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 22px;
+}
+
+.inert {
+    display: none;
+}
+
+.error {
+    padding-bottom: 16px;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 22px;
+    color: #fd4d4d;
+}
+
+.error:first-child {
+    margin-top: 32px;
+}
+
+.error-style {
+    outline: 2px solid #fd4d4d;
+}
+
+.form__name-option_chbx {
+    margin-bottom: 8px;
+}
+
+.form__name-option_chbx:last-child {
+    margin-bottom: 0px;
+}

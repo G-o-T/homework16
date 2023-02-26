@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css"> 
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <h1 class="main-title">Рассчитайте стоимость авто за пару кликов</h1>
+        <form name="form" novalidate>
+            <div class="form__row">
+                <div class="form__item">
+                    <label class="input-title" for="brands">Марка</label>
+                    <select class="input brands" name="brand" id="trademark">
+                        <option value="default" selected="true" disabled="disabled">выберите марку</option>
+                        <option value="Jaguar">Jaguar</option>
+                        <option value="Mazda">Mazda</option>
+                        <option value="Opel">Opel</option>
+                        <option value="Renault">Renault</option>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <label class="input-title" for="model">Модель</label>
+                    <select class="input" name="model" id="model"></select>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__item ">
+                    <p class="input-title">Состояние</p>
+                    <div class="form__item-row states">
+                        <div class="form__name-option">
+                            <input class="form__radiobtn" type="radio" value="new" id="radio_new" name="state" checked>
+                            <label class="form__radiobtn-label"><span>новый</span></label>
+                        </div>
+                        <div class="form__name-option">
+                            <input class="form__radiobtn" type="radio" value="old" id="radio_old" name="state">
+                            <label class="form__radiobtn-label"><span>поддержанный</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div id="owners" class="form__item inert">
+                    <p class="input-title">Количество владельцев</p>
+                    <div class="form__item-row">
+                        <div class="form__name-option">
+                            <input class="form__radiobtn" type="radio" value="few" id="radio_few" name="owner" checked>
+                            <label class="form__radiobtn-label"><span>1 - 2 владельца</span></label>
+                        </div>
+                        <div class="form__name-option">
+                            <input class="form__radiobtn" type="radio" value="many" id="radio_many" name="owner">
+                            <label class="form__radiobtn-label"><span>3 владельца и более</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__item">
+                    <label class="input-title">Тип топлива</label>
+                    <div class="form__item-row">
+                        <div class="form__name-option">
+                            <input class="form__radiobtn" type="radio" value="petrol" id="radio_petrol" name="fuel" checked>
+                            <label class="form__radiobtn-label"><span>бензин</span></label>
+                        </div>
+                        <div class="form__name-option">
+                            <input class="form__radiobtn" type="radio" value="diesel" id="radio_diesel" name="fuel">
+                            <label class="form__radiobtn-label"><span>дизель</span></label>
+                        </div>
+                        <div class="form__name-option">
+                            <input class="form__radiobtn" type="radio" value="gas" id="radio_gas" name="fuel">
+                            <label class="form__radiobtn-label"><span>газ</span></label>
+                        </div>
+                        <div class="form__name-option">
+                            <input class="form__radiobtn" type="radio" value="electricity" id="radio_electricity" name="fuel">
+                            <label class="form__radiobtn-label"><span>электричество</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__item">
+                    <label class="input-title">Объем двигателя</label>
+                    <input type="number" class="input" name="capacity" placeholder="от 1.1 до 3.5 л" min="1.1" max="3.5" step="0.1" required>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__item">
+                    <p class="input-title">Системы безопасности</p>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn test" type="checkbox" value="ABS" name="security" сhecked>
+                        <label class="form__chbxbtn-label"><span>ABS</span></label>
+                    </div>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn test" type="checkbox" value="ESP" name="security">
+                        <label class="form__chbxbtn-label"><span>ESP</span></label>
+                    </div>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn test" type="checkbox" value="immobilizer" name="security">
+                        <label class="form__chbxbtn-label"><span>иммобилайзер</span></label>
+                    </div>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn test" type="checkbox" value="signalling" name="security">
+                        <label class="form__chbxbtn-label"><span>сигнализация</span></label>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <p class="input-title" for="exterior">Экстерьер</p>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn" type="checkbox" value="disk" id="radio_exterior" name="exterior">
+                        <label class="form__chbxbtn-label"><span>легкосплавные диски</span></label>
+                    </div>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn" type="checkbox" value="railing" id="radio_exterior" name="exterior">
+                        <label class="form__chbxbtn-label"><span>рейлинги на крыше</span></label>
+                    </div>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn" type="checkbox" value="hitch" id="radio_exterior" name="exterior">
+                        <label class="form__chbxbtn-label"><span>фаркоп</span></label>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <p class="input-title">Системы помощи</p>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn" type="checkbox" value="rainSensor" name="helpSystems">
+                        <label class="form__chbxbtn-label"><span>датчик дождя</span></label>
+                    </div>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn" type="checkbox" value="parkingSensors" name="helpSystems">
+                        <label class="form__chbxbtn-label"><span>парктроники</span></label>
+                    </div>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn" type="checkbox" value="airbag" name="helpSystems">
+                        <label class="form__chbxbtn-label"><span>подушки безопасности</span></label>
+                    </div>
+                    <div class="form__name-option form__name-option_chbx">
+                        <input class="form__chbxbtn" type="checkbox" value="rearViewCamera" name="helpSystems">
+                        <label class="form__chbxbtn-label"><span>камера заднего вида</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__item ">
+                    <p class="input-title">Способ оплаты</p>
+                    <div class="form__item-row">
+                        <div class="form__name-option form__name-option_chbx">
+                            <input class="form__chbxbtn" type="radio" value="card" name="payment" checked>
+                            <label class="form__chbxbtn-label"><span>безналичный расчет</span></label>
+                        </div>
+                        <div class="form__name-option form__name-option_chbx">
+                            <input class="form__chbxbtn" type="radio" value="cash" name="payment">
+                            <label class="form__chbxbtn-label"><span>наличный расчет</span></label>
+                        </div>
+                        <div class="form__name-option form__name-option_chbx">
+                            <input class="form__chbxbtn" type="radio" value="entity" name="payment">
+                            <label class="form__chbxbtn-label"><span>плательщик - юрлицо</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+                <button class="btn btn-calc">Рассчитать стоимость</button>
+                <button class="btn btn-remover">Очистить форму</button>
+            </div>
+        </form>
+        <div class="result-field">
+        </div>
+        <div id="price" class="price inert">
+            <p class="price__text">Стоимость авто с учетом всех параметров составляет</p>
+            <p class="price__value"></p>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
